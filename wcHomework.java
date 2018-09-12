@@ -98,22 +98,28 @@ public class wcHomework {
         string1 = string[0];
         File = string[1];
 
-        switch(string1) {
-        case "-c" :
-        	System.out.println("字符数目 ：" + cCount());
-        	break;
-        case "-w" :
-        	System.out.println("词的数目 ：" + wCount());
-        	break;
-        case "-l" :
-        	System.out.println("行数总数 ： " + lCount());
-        	break;
-        case "-a" :
-        	moreLineCount();
-        	System.out.println("代码行数 ： " + codeLineCount);
-        	System.out.println("空白行数 ： " + nullLineCount);
-        	System.out.println("注释行数 ： " + noteLineCount);
-        	break;
+        File file = new File(File);
+        if(file.exists()) {
+           switch(string1) {
+              case "-c" :
+        	     System.out.println("字符数目 ：" + cCount());
+        	     break;
+              case "-w" :
+        	     System.out.println("词的数目 ：" + wCount());
+        	     break;
+              case "-l" :
+        	     System.out.println("行数总数 ： " + lCount());
+        	     break;
+              case "-a" :
+        	     moreLineCount();
+        	     System.out.println("代码行数 ： " + codeLineCount);
+        	     System.out.println("空白行数 ： " + nullLineCount);
+        	     System.out.println("注释行数 ： " + noteLineCount);
+        	     break;
+          }
+        }
+        else {
+            System.out.println("文件路径输入有误或者文件路径不存在");
         }
 	}
 
