@@ -23,14 +23,13 @@ public class wcHomework {
     	 FileInputStream fis = new FileInputStream(file);
          InputStreamReader isr = new InputStreamReader(fis, "UTF-8");
          BufferedReader br = new BufferedReader(isr);
-   //      StringBuffer sb = new StringBuffer();
          String line = "";
          while ((line = br.readLine()) != null) {
         	 cCount  += line.length();
          }
-         return cCount; 
+         return cCount;
     }
-    
+
     public static int wCount() throws IOException {
     	 wCount = 0;
     	File file = new File(File);
@@ -41,12 +40,12 @@ public class wcHomework {
         String line = "";
         while ((line = br.readLine()) != null) {
         	sb.append(line);
-        	line = line.trim();//trim()方法返回调用字符串对象的一个副本，但是所有起始和结尾的空格都被删除了
+        	line = line.trim(); //删除起始和结尾的空格
             wCount = sb.toString().split("\\s+").length;
         }
         return wCount;
     }
-    
+
     public static int lCount() throws IOException {
         lCount = 0;
     	File file = new File(File);
@@ -75,12 +74,12 @@ public class wcHomework {
                  nullLineCount =  nullLineCount + 1;
                  continue;
              }
-             int a = line.indexOf("/");//返回第一次出现的指定子字符串在此字符串中的索引。
+             int a = line.indexOf("/");
              int b = line.substring(a + 1).indexOf("/");
              if (b == 0) {
                  noteLineCount++;
                  continue;
-             }            
+             }
              codeLineCount++;
         }
     }
@@ -92,16 +91,16 @@ public class wcHomework {
         string = command.split(" ");
         string1 = string[0];
         File = string[1];
-        
+
         switch(string1) {
         case "-c" :
-        	System.out.println("字符数 ：" + cCount());
+        	System.out.println("字符数目 ：" + cCount());
         	break;
         case "-w" :
         	System.out.println("词的数目 ：" + wCount());
         	break;
         case "-l" :
-        	System.out.println("行数 ： " + lCount());
+        	System.out.println("行数总数 ： " + lCount());
         	break;
         case "-a" :
         	moreLineCount();
