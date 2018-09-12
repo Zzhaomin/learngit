@@ -17,6 +17,8 @@ public class wcHomework {
     private static String[] string;
     private static String string1;
     private static String File;
+
+    //统计字符数
     public static int cCount() throws IOException {
     	 cCount = 0;
     	 File file = new File(File);
@@ -30,6 +32,7 @@ public class wcHomework {
          return cCount;
     }
 
+    //统计词数
     public static int wCount() throws IOException {
     	 wCount = 0;
     	File file = new File(File);
@@ -46,6 +49,7 @@ public class wcHomework {
         return wCount;
     }
 
+   //统计总行数
     public static int lCount() throws IOException {
         lCount = 0;
     	File file = new File(File);
@@ -59,6 +63,8 @@ public class wcHomework {
         }
         return lCount;
     }
+
+    //统计代码行数、空白行数、注释行数
     public static void moreLineCount() throws IOException {
         codeLineCount = 0;
         nullLineCount = 0;
