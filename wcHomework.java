@@ -116,6 +116,7 @@ public class wcHomework {
         	     System.out.println("空白行数 ： " + nullLineCount);
         	     System.out.println("注释行数 ： " + noteLineCount);
         	     break;
+             default : System.out.println("没有此命令");
           }
         }
         else {
