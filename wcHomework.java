@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Scanner;
 
-public class wcHomework {
+public class WcHomework {
     private static int cCount = 0;
     private static int wCount = 0;
     private static int lCount = 0;
